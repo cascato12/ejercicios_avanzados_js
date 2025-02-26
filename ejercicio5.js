@@ -12,6 +12,6 @@ function rollDice(caras) {
 }
 
 // Ejemplos
-console.log(rollDice(8)) // Simula un dado de 6 caras (resultado entre 1 y 8)
+console.log(rollDice(8)) // Simula un dado de 8 caras (resultado entre 1 y 8)
 console.log(rollDice(10)) // Simula un dado de 10 caras (resultado entre 1 y 10)
 console.log(rollDice(20)) // Simula un dado de 20 caras (resultado entre 1 y 20)
