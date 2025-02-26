@@ -12,10 +12,6 @@ Finalmente retorna el array.
 
 De nuevo haz varios ejemplos para practicar y comprueba que funcionan correctamente.*/
 
-function findArrayIndex(array, text) {
-  //Tu codigo
-}
-
 const mainCharacters = [
   'Luke',
   'Leia',
@@ -25,3 +21,31 @@ const mainCharacters = [
   'Anakin',
   'Obi-Wan'
 ]
+
+//Parte 1.
+function findArrayIndex(array, text) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === text) {
+      return i
+    }
+  }
+  return -1
+}
+//Ejemplos
+console.log(findArrayIndex(mainCharacters, 'Anakin'))
+console.log(findArrayIndex(mainCharacters, 'Yoda'))
+console.log(findArrayIndex(mainCharacters, 'Obi-Wan'))
+
+//Parte 2.
+function removeItem(array, text) {
+  const index = findArrayIndex(array, text)
+  if (index !== -1) {
+    array.splice(index, 1)
+  }
+  return array
+}
+
+// Ejemplos
+console.log(removeItem(mainCharacters, 'Chewbacca'))
+console.log(removeItem(mainCharacters, 'Yoda'))
+console.log(removeItem(mainCharacters, 'Rey'))

@@ -30,3 +30,13 @@ const movies = [
     categories: ['comedia', 'aventura', 'animación']
   }
 ]
+
+const categoriasUnicas = new Set()
+for (const movie of movies) {
+  for (const categoria of movie.categories) {
+    categoriasUnicas.add(categoria)
+  }
+}
+
+const categorias = Array.from(categoriasUnicas)
+console.log(categorias)
